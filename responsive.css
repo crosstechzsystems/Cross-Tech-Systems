@@ -1,56 +1,58 @@
-/* Responsive Design - Tablet & Mobile */
+/* Mobile and layout handling */
 
-@media (max-width: 1024px) {
-  .container { padding: 0 1.5rem; }
-  .about-grid { grid-template-columns: 1fr; }
-  .contact-grid { grid-template-columns: 1fr; }
-  .nav-links { gap: 1rem; font-size: 0.85rem; }
-  .hero-actions { flex-direction: column; }
-  .btn { width: 100%; }
-}
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
 
-@media (max-width: 768px) {
-  :root { font-size: 14px; }
-  .nav-container { gap: 1rem; }
-  .nav-links { display: none; }
-  .nav-links.open { display: flex; }
-  .hamburger { display: flex; }
-  .nav-phone, .nav-whatsapp { display: none; }
-  .hero { margin-top: 60px; }
-  .hero-container { padding: 1.5rem; }
-  .hero-title { font-size: clamp(1.8rem, 4vw, 2.5rem); }
-  .hero-description { font-size: 1rem; }
-  .hero-actions { flex-direction: column; gap: 0.8rem; }
-  .btn { width: 100%; }
-  .hero-stats { gap: 2rem; }
-  .stat-value { font-size: 1.5rem; }
-  section { padding: 3rem 0; }
-  .services-grid { grid-template-columns: 1fr; }
-  .products-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
-  .about-text { order: 2; }
-  .about-image { order: 1; }
-  .contact-grid { grid-template-columns: 1fr; }
-  .info-item { text-align: center; flex-direction: column; align-items: center; }
-  .footer-brand { flex-direction: column; gap: 0.5rem; }
-}
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navLinks.style.display = navLinks.classList.contains('open') ? 'flex' : '';
+      navLinks.style.flexDirection = 'column';
+      navLinks.style.position = navLinks.classList.contains('open') ? 'absolute' : 'static';
+      navLinks.style.top = navLinks.classList.contains('open') ? '72px' : 'auto';
+      navLinks.style.left = navLinks.classList.contains('open') ? '1rem' : 'auto';
+      navLinks.style.right = navLinks.classList.contains('open') ? '1rem' : 'auto';
+      navLinks.style.background = navLinks.classList.contains('open') ? 'rgba(8, 12, 18, 0.95)' : 'transparent';
+      navLinks.style.padding = navLinks.classList.contains('open') ? '1rem' : '0';
+      navLinks.style.border = navLinks.classList.contains('open') ? '1px solid rgba(0, 215, 255, 0.12)' : 'none';
+      navLinks.style.borderRadius = navLinks.classList.contains('open') ? '12px' : '0';
+      navLinks.style.zIndex = '999';
+    });
+  }
 
-@media (max-width: 480px) {
-  :root { font-size: 13px; }
-  .brand-name { font-size: 0.9rem; }
-  .hero-title { font-size: clamp(1.5rem, 3vw, 2rem); }
-  .hero-stats { gap: 1.5rem; }
-  .stat-value { font-size: 1.3rem; }
-  .btn { padding: 0.7rem 1.2rem; font-size: 0.85rem; }
-  .section-header { margin-bottom: 2rem; }
-  .service-card { padding: 1.2rem; }
-  .product-card { padding: 1rem; }
-  .contact-form { padding: 1.5rem; }
-}
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
 
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+  if (form) {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const contact = document.getElementById('contact').value.trim();
+      const service = document.getElementById('service').value;
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !contact || !service || !message) {
+        status.textContent = 'Please complete all required fields.';
+        status.style.color = '#ff8080';
+        return;
+      }
+
+      const whatsappText = `Hi Cross Tech Systems, my name is ${name}. I need ${service}. ${message} You can reach me at ${contact}.`;
+      const url = `https://wa.me/27836832745?text=${encodeURIComponent(whatsappText)}`;
+      window.open(url, '_blank', 'noopener');
+
+      status.textContent = 'Opening WhatsApp message...';
+      status.style.color = '#7de8ff';
+      form.reset();
+    });
+  }
+});
+
+@media (max-width: 760px) {
+  .nav-links {
+    display: none;
   }
 }
+"}]}  ,
