@@ -1,11 +1,8 @@
-/* ═════════════════════════════════════════════════════════════════════════════════
-   CROSS TECH SYSTEMS — PREMIUM DARK TECH THEME
-   Randburg Storefront Edition • Professional IT Services Website
-   ═════════════════════════════════════════════════════════════════════════════════ */
+/* Premium, dark, confident brand styling */
 
 :root {
-  --dark-bg: #0a0e27;
-  --darker-bg: #050609;
+  --bg: #070c1a;
+  --bg-2: #0d1426;
   --card-bg: #141829;
   --accent-blue: #00d4ff;
   --accent-cyan: #00f0ff;
@@ -24,7 +21,7 @@
 html { scroll-behavior: smooth; font-size: 16px; }
 body {
   margin: 0;
-  background: var(--dark-bg);
+  background: var(--bg);
   color: var(--muted);
   font-family: var(--font-body);
   line-height: 1.6;
@@ -52,15 +49,12 @@ p { margin: 0 0 1em; }
 
 .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
 
-/* ─────────────────────────────────────────────────────────────────────────────────
-   NAVIGATION
-   ───────────────────────────────────────────────────────────────────────────────── */
-
+/* Navigation */
 .navbar {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(5, 6, 9, 0.95);
+  background: rgba(13, 20, 38, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-line);
   padding: 1rem 0;
@@ -76,15 +70,7 @@ p { margin: 0 0 1em; }
   gap: 2rem;
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  margin-right: auto;
-  flex-shrink: 0;
-}
-
-.brand-logo {
+.nav-logo {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -92,13 +78,15 @@ p { margin: 0 0 1em; }
   object-fit: cover;
 }
 
-.brand-text-group {
+.nav-brand {
   display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
+  align-items: center;
+  gap: 0.8rem;
+  margin-right: auto;
+  flex-shrink: 0;
 }
 
-.brand-name {
+.nav-brand-text {
   font-family: var(--font-head);
   font-weight: 800;
   font-size: 1.1rem;
@@ -107,12 +95,7 @@ p { margin: 0 0 1em; }
   line-height: 1;
 }
 
-.brand-name em {
-  color: var(--accent-blue);
-  font-style: normal;
-}
-
-.brand-tagline {
+.nav-brand-tagline {
   font-family: var(--font-head);
   font-size: 0.65rem;
   letter-spacing: 0.12em;
@@ -151,7 +134,7 @@ p { margin: 0 0 1em; }
   flex-shrink: 0;
 }
 
-.nav-phone, .nav-whatsapp {
+.nav-phone, .nav-wa {
   color: var(--accent-light);
   font-weight: 700;
   font-size: 0.85rem;
@@ -169,12 +152,12 @@ p { margin: 0 0 1em; }
   color: var(--white);
 }
 
-.nav-whatsapp {
+.nav-wa {
   background: #25d366;
   color: white;
 }
 
-.nav-whatsapp:hover {
+.nav-wa:hover {
   background: #1ebe59;
   box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
 }
@@ -197,10 +180,7 @@ p { margin: 0 0 1em; }
   transition: var(--transition);
 }
 
-/* ─────────────────────────────────────────────────────────────────────────────────
-   HERO SECTION - STOREFRONT FOCUS
-   ───────────────────────────────────────────────────────────────────────────────── */
-
+/* Hero Section */
 .hero {
   position: relative;
   height: 100vh;
@@ -226,7 +206,7 @@ p { margin: 0 0 1em; }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(5, 6, 9, 0.7), rgba(10, 14, 39, 0.8));
+  background: linear-gradient(135deg, rgba(7, 12, 26, 0.7), rgba(13, 20, 38, 0.8));
   z-index: 2;
 }
 
@@ -302,12 +282,11 @@ p { margin: 0 0 1em; }
   text-transform: uppercase;
   letter-spacing: 0.05em;
   text-decoration: none;
-  display: inline-flex;
 }
 
 .btn-primary {
   background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
-  color: var(--darker-bg);
+  color: var(--bg);
   box-shadow: 0 0 20px var(--glow-blue);
 }
 
@@ -360,10 +339,7 @@ p { margin: 0 0 1em; }
   letter-spacing: 0.05em;
 }
 
-/* ─────────────────────────────────────────────────────────────────────────────────
-   SECTIONS
-   ───────────────────────────────────────────────────────────────────────────────── */
-
+/* Sections */
 section { padding: 5rem 0; }
 
 .section-header {
@@ -377,8 +353,8 @@ section { padding: 5rem 0; }
 .section-header h2 { margin-bottom: 1rem; }
 .section-header p { font-size: 1.05rem; color: var(--muted); }
 
-/* SERVICES */
-.services { background: linear-gradient(180deg, var(--dark-bg), var(--darker-bg)); }
+/* Services */
+.services { background: linear-gradient(180deg, var(--bg), var(--bg-2)); }
 
 .services-grid {
   display: grid;
@@ -439,8 +415,8 @@ section { padding: 5rem 0; }
   transform: translateX(5px);
 }
 
-/* SHOP */
-.shop { background: var(--darker-bg); }
+/* Shop */
+.shop { background: var(--bg-2); }
 
 .products-grid {
   display: grid;
@@ -467,7 +443,7 @@ section { padding: 5rem 0; }
 .product-badge {
   display: inline-block;
   background: var(--accent-blue);
-  color: var(--darker-bg);
+  color: var(--bg-2);
   padding: 0.3rem 0.8rem;
   border-radius: 4px;
   font-size: 0.7rem;
@@ -493,8 +469,8 @@ section { padding: 5rem 0; }
   margin: 1rem 0;
 }
 
-/* ABOUT */
-.about { background: linear-gradient(180deg, var(--dark-bg), var(--darker-bg)); }
+/* About */
+.about { background: linear-gradient(180deg, var(--bg), var(--bg-2)); }
 
 .about-grid {
   display: grid;
@@ -536,7 +512,7 @@ section { padding: 5rem 0; }
   bottom: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(5, 6, 9, 0.95);
+  background: rgba(13, 20, 38, 0.95);
   backdrop-filter: blur(10px);
   border: 1px solid var(--border-line);
   border-radius: 6px;
@@ -547,8 +523,8 @@ section { padding: 5rem 0; }
   white-space: nowrap;
 }
 
-/* CONTACT */
-.contact { background: var(--darker-bg); }
+/* Contact */
+.contact { background: var(--bg-2); }
 
 .contact-grid {
   display: grid;
@@ -609,7 +585,7 @@ section { padding: 5rem 0; }
 .form-group input,
 .form-group textarea,
 .form-group select {
-  background: var(--dark-bg);
+  background: var(--bg);
   border: 1px solid var(--border-line);
   border-radius: 6px;
   padding: 0.8rem;
@@ -639,9 +615,9 @@ section { padding: 5rem 0; }
   min-height: 1.2em;
 }
 
-/* FOOTER */
+/* Footer */
 .footer {
-  background: var(--darker-bg);
+  background: var(--bg-2);
   border-top: 1px solid var(--border-line);
   padding: 3rem 0 1.5rem;
 }
@@ -674,3 +650,11 @@ section { padding: 5rem 0; }
 .footer-copy { font-size: 0.8rem; color: var(--muted); margin: 1rem 0 0; }
 .footer-copy a { color: var(--accent-blue); transition: var(--transition); }
 .footer-copy a:hover { color: var(--accent-cyan); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links { gap: 1rem; }
+  .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  .hamburger { display: flex; }
+  .nav-links { display: none; }
+}
