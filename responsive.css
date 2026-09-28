@@ -1,113 +1,58 @@
-/* ================= Cross Tech Systems — Responsive Theme ================= */
+/* Mobile and layout handling */
 
-@media (max-width: 1024px) {
-  .hero {
-    grid-template-columns: 1fr;
-    text-align: left;
-    padding-top: 2.5rem;
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navLinks.style.display = navLinks.classList.contains('open') ? 'flex' : '';
+      navLinks.style.flexDirection = 'column';
+      navLinks.style.position = navLinks.classList.contains('open') ? 'absolute' : 'static';
+      navLinks.style.top = navLinks.classList.contains('open') ? '72px' : 'auto';
+      navLinks.style.left = navLinks.classList.contains('open') ? '1rem' : 'auto';
+      navLinks.style.right = navLinks.classList.contains('open') ? '1rem' : 'auto';
+      navLinks.style.background = navLinks.classList.contains('open') ? 'rgba(8, 12, 18, 0.95)' : 'transparent';
+      navLinks.style.padding = navLinks.classList.contains('open') ? '1rem' : '0';
+      navLinks.style.border = navLinks.classList.contains('open') ? '1px solid rgba(0, 215, 255, 0.12)' : 'none';
+      navLinks.style.borderRadius = navLinks.classList.contains('open') ? '12px' : '0';
+      navLinks.style.zIndex = '999';
+    });
   }
 
-  .hero-visual {
-    order: -1;
-  }
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
 
-  .logo-lockup {
-    min-height: 340px;
-  }
+  if (form) {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
 
-  .product-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+      const name = document.getElementById('name').value.trim();
+      const contact = document.getElementById('contact').value.trim();
+      const service = document.getElementById('service').value;
+      const message = document.getElementById('message').value.trim();
 
-  .service-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+      if (!name || !contact || !service || !message) {
+        status.textContent = 'Please complete all required fields.';
+        status.style.color = '#ff8080';
+        return;
+      }
 
-  .repair-strip,
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-}
+      const whatsappText = `Hi Cross Tech Systems, my name is ${name}. I need ${service}. ${message} You can reach me at ${contact}.`;
+      const url = `https://wa.me/27836832745?text=${encodeURIComponent(whatsappText)}`;
+      window.open(url, '_blank', 'noopener');
 
-@media (max-width: 860px) {
+      status.textContent = 'Opening WhatsApp message...';
+      status.style.color = '#7de8ff';
+      form.reset();
+    });
+  }
+});
+
+@media (max-width: 760px) {
   .nav-links {
-    position: absolute;
-    top: calc(100% + 1px);
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    padding: 1rem 1.25rem 1.25rem;
-    background: rgba(5, 8, 13, 0.96);
-    border-bottom: 1px solid var(--line);
-    transform: translateY(-10px);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-  }
-
-  .nav-links.open {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-  }
-
-  .nav-links a {
-    padding: 0.6rem 0;
-  }
-
-  .nav-button {
     display: none;
   }
-
-  .hamburger {
-    display: block;
-  }
 }
-
-@media (max-width: 640px) {
-  section {
-    padding: 4rem 1rem;
-  }
-
-  .nav-inner {
-    padding: 0.8rem 1rem;
-  }
-
-  .brand-copy {
-    display: none;
-  }
-
-  .hero {
-    padding-top: 1.5rem;
-    padding-bottom: 2rem;
-  }
-
-  .hero h1 {
-    font-size: 2.8rem;
-  }
-
-  .hero-stats {
-    gap: 1rem;
-  }
-
-  .logo-ring {
-    width: min(360px, 90vw);
-  }
-
-  .product-grid,
-  .service-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .price-row {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .trust-content {
-    justify-content: center;
-    text-align: center;
-  }
-}
+"}]}  ,
