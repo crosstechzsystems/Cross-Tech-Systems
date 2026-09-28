@@ -653,8 +653,8 @@ section { padding: 5rem 0; }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .nav-links { gap: 1rem; }
+  .nav-links { gap: 1rem; display: none; }
+  .nav-links.active { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(13, 20, 38, 0.98); padding: 1rem; border-top: 1px solid var(--border-line); }
   .about-grid, .contact-grid { grid-template-columns: 1fr; }
   .hamburger { display: flex; }
-  .nav-links { display: none; }
 }
