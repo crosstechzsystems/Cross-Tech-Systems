@@ -1,263 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cross Tech Systems | IT Support & Technology Solutions | Cape Town</title>
-<meta name="description" content="Cross Tech Systems — premium refurbished laptops, PC bundles, IT support and repairs in Cape Town. Quality products, expert support, great prices.">
-<link rel="icon" href="assets/logo.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="responsive.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cross Tech Systems delivers premium laptops, gaming PCs, repairs, IT support, and digital services in Randburg, Johannesburg."
+    />
+    <title>Cross Tech Systems | Premium IT Store, Repairs & Digital Services</title>
+    <link rel="icon" href="assets/logo.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <header class="topbar" id="navbar">
+      <div class="nav-inner">
+        <a href="#hero" class="brand" aria-label="Cross Tech Systems home">
+          <div class="brand-mark-wrap">
+            <img src="assets/logo.jpg" alt="Cross Tech Systems logo" />
+          </div>
+          <div class="brand-copy">
+            <span class="brand-name">CROSS TECH</span>
+            <span class="brand-sub">SYSTEMS</span>
+          </div>
+        </a>
 
-<!-- ===== NAV ===== -->
-<header class="navbar" id="navbar">
-  <div class="nav-inner">
-    <a href="#hero" class="brand">
-      <img src="assets/logo.jpg" alt="Cross Tech Systems logo" class="brand-mark">
-      <span class="brand-text">Cross Tech <em>Systems</em></span>
-    </a>
-    <nav class="nav-links" id="navLinks">
-      <a href="#hero">Home</a>
-      <a href="#products">Laptops</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a href="tel:+27813798480" class="nav-cta">081 379 8480</a>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
+        <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+          <a href="#hero">Home</a>
+          <a href="#products">Shop</a>
+          <a href="#services">Services</a>
+          <a href="#repairs">Repairs</a>
+          <a href="#contact">Contact</a>
+        </nav>
 
-<!-- ===== HERO ===== -->
-<section class="hero" id="hero">
-  <div class="hero-grid"></div>
-  <div class="hero-inner">
-    <p class="eyebrow">Shop 5, Westgate Shopping Centre · Cape Town</p>
-    <h1>Reliable tech, priced for real people.</h1>
-    <p class="hero-sub">Cross Tech Systems sources, tests and sells refurbished business laptops and PCs — backed by hands‑on IT support from a team that actually answers the phone.</p>
-    <div class="hero-actions">
-      <a href="#products" class="btn btn-primary">Browse laptop deals</a>
-      <a href="#contact" class="btn btn-ghost">Talk to us</a>
-    </div>
-    <dl class="hero-stats">
-      <div><dt>4,199</dt><dd>Cheapest bundle from R</dd></div>
-      <div><dt>1‑Year</dt><dd>Service agreements available</dd></div>
-      <div><dt>Win 10/11</dt><dd>Pro, preloaded &amp; ready</dd></div>
-    </dl>
-  </div>
-  <div class="hero-media">
-    <img src="assets/logo.jpg" alt="Cross Tech Systems emblem" class="hero-emblem">
-  </div>
-</section>
+        <a class="nav-button" href="https://wa.me/27836832745" target="_blank" rel="noreferrer">WhatsApp</a>
 
-<!-- ===== PRODUCTS ===== -->
-<section class="products" id="products">
-  <div class="section-head">
-    <p class="eyebrow">Laptop &amp; PC bundles</p>
-    <h2>Pick your setup</h2>
-    <p class="section-sub">Every unit is tested, wiped and reloaded with a genuine Windows license before it reaches you.</p>
-  </div>
-
-  <div class="product-grid">
-
-    <article class="product-card">
-      <div class="product-media"><img src="assets/deal-hp-elitebook.jpg" alt="HP EliteBook 14 inch Silver laptop, front and rear view"></div>
-      <div class="product-body">
-        <span class="tag">Lot 35</span>
-        <h3>HP EliteBook 14" Silver</h3>
-        <ul class="spec-list">
-          <li>Intel Core i5 (8th Gen)</li>
-          <li>8GB RAM · 256GB SSD</li>
-          <li>14" Full HD Display</li>
-          <li>Windows 10 Pro</li>
-        </ul>
-        <div class="price-row">
-          <span class="price">R 4,499</span>
-          <a href="#contact" class="btn btn-small">Enquire</a>
-        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
-    </article>
+    </header>
 
-    <article class="product-card">
-      <div class="product-media"><img src="assets/deal-dell-vostro.jpg" alt="Dell Vostro 15 5590 laptop deal, joint offer with Let Me Get It"></div>
-      <div class="product-body">
-        <span class="tag">Partner deal · MGi</span>
-        <h3>Dell Vostro 15 5590</h3>
-        <ul class="spec-list">
-          <li>Intel Core i5 (10th Gen)</li>
-          <li>8GB RAM · 256GB SSD</li>
-          <li>15.6" Full HD Anti‑Glare</li>
-          <li>Windows 10 Pro + 1‑Year Service Agreement</li>
-        </ul>
-        <div class="price-row">
-          <span class="price">R 3,000</span>
-          <a href="#contact" class="btn btn-small">Enquire</a>
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Now Open · Randburg / Ferndale, Johannesburg</p>
+          <h1>
+            Premium technology<br />
+            <span>for work, play, and growth.</span>
+          </h1>
+          <p class="hero-sub">
+            Premium laptops, gaming PCs, accessories, professional repairs, and digital solutions — all designed to keep your business and lifestyle moving.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#products" class="btn btn-primary">Browse products</a>
+            <a href="#contact" class="btn btn-secondary">Book a consultation</a>
+          </div>
+
+          <div class="hero-stats" aria-label="Business stats">
+            <div>
+              <strong>500+</strong>
+              <span>Happy clients</span>
+            </div>
+            <div>
+              <strong>5★</strong>
+              <span>Customer rating</span>
+            </div>
+            <div>
+              <strong>7-Day</strong>
+              <span>Support promise</span>
+            </div>
+          </div>
         </div>
-      </div>
-    </article>
 
-    <article class="product-card">
-      <div class="product-media"><img src="assets/deal-asus-zenbook.jpg" alt="ASUS Zenbook Flip S convertible laptop, front and rear view"></div>
-      <div class="product-body">
-        <span class="tag">Convertible</span>
-        <h3>ASUS Zenbook Flip S</h3>
-        <ul class="spec-list">
-          <li>Intel Core i7 (8th Gen)</li>
-          <li>16GB RAM · 512GB SSD</li>
-          <li>13.3" Full HD Touch Display</li>
-          <li>Windows 10 Pro</li>
-        </ul>
-        <div class="price-row">
-          <span class="price">R 7,999</span>
-          <a href="#contact" class="btn btn-small">Enquire</a>
+        <div class="hero-visual" aria-label="Cross Tech Systems brand mark">
+          <div class="logo-lockup">
+            <div class="logo-ring">
+              <div class="logo-core">
+                <span class="logo-word">CROSS TECH</span>
+                <span class="logo-word logo-word-small">SYSTEMS</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </article>
+      </section>
 
-    <article class="product-card product-card--wide">
-      <div class="product-media"><img src="assets/deal-bundle-5laptops.jpg" alt="Five laptop bundle deal comparison: HP EliteBook, HP Business Laptop, ASUS Zenbook, Dell Latitude, Dell Vostro"></div>
-      <div class="product-body">
-        <span class="tag">5‑laptop office bundle</span>
-        <h3>Fit out a full team</h3>
-        <p class="product-desc">Mix of HP, ASUS and Dell business laptops, individually priced from R4,199 to R7,999 — or take all five as a bundle.</p>
-        <div class="price-row">
-          <span class="price">R 24,999 <small>bundle</small></span>
-          <a href="#contact" class="btn btn-small">Ask about the bundle</a>
+      <section class="trust-bar">
+        <div class="trust-content">
+          <span>✔ Premium devices</span>
+          <span>✔ Same-day repairs</span>
+          <span>✔ IT support</span>
+          <span>✔ Website design</span>
         </div>
-      </div>
-    </article>
+      </section>
 
-    <article class="product-card product-card--wide">
-      <div class="product-media"><img src="assets/deal-bulk-7pc.jpg" alt="Bulk offer of seven refurbished business PCs plus a laptop, Windows 11 Pro"></div>
-      <div class="product-body">
-        <span class="tag">Bulk office offer</span>
-        <h3>7 PCs + 1 laptop</h3>
-        <p class="product-desc">Refurbished Dell OptiPlex desktops and a Dell Latitude laptop, preloaded with Windows 11 Pro — a full small‑office setup worth over R24,000.</p>
-        <div class="price-row">
-          <span class="price">R 15,000</span>
-          <a href="#contact" class="btn btn-small">Enquire</a>
+      <section class="products" id="products">
+        <div class="section-head">
+          <p class="eyebrow">Featured range</p>
+          <h2>Premium devices and everyday essentials</h2>
         </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-image image-laptop"></div>
+            <div class="product-body">
+              <span class="tag">Gaming</span>
+              <h3>ROG Strix G16</h3>
+              <p>High-performance gaming laptop built for speed, visuals, and desktop-level power.</p>
+              <div class="price-row">
+                <span class="price">R 34,999</span>
+                <a href="#contact" class="mini-link">Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image image-pc"></div>
+            <div class="product-body">
+              <span class="tag">Performance</span>
+              <h3>Gaming PC Build</h3>
+              <p>Custom gaming systems engineered for smooth gameplay, multitasking, and reliability.</p>
+              <div class="price-row">
+                <span class="price">R 18,500</span>
+                <a href="#contact" class="mini-link">Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image image-printer"></div>
+            <div class="product-body">
+              <span class="tag">Business</span>
+              <h3>Office Printer</h3>
+              <p>Dependable printing, scanning, and copying for high-volume productivity.</p>
+              <div class="price-row">
+                <span class="price">R 4,299</span>
+                <a href="#contact" class="mini-link">Enquire</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card highlight-card">
+            <div class="product-image image-bundle"></div>
+            <div class="product-body">
+              <span class="tag">Business bundle</span>
+              <h3>Office refresh package</h3>
+              <p>Perfect for growing teams needing multiple devices with a clean setup and strong support.</p>
+              <div class="price-row">
+                <span class="price">R 24,999</span>
+                <a href="#contact" class="mini-link">Get quote</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="services" id="services">
+        <div class="section-head light-head">
+          <p class="eyebrow">What we offer</p>
+          <h2>Hardware and digital support under one roof</h2>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-icon">🖥️</div>
+            <h3>Computer & laptop repairs</h3>
+            <p>Screen replacements, battery swaps, keyboard fixes, diagnostics, and quick-turn repair support.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🛡️</div>
+            <h3>Virus & malware removal</h3>
+            <p>Safeguard your system with deep cleaning, performance tuning, and threat elimination.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🔧</div>
+            <h3>Hardware upgrades</h3>
+            <p>Boost performance with SSDs, more RAM, and reliable component upgrades that extend device life.</p>
+          </article>
+
+          <article class="service-card featured-service">
+            <div class="service-icon">🌐</div>
+            <h3>Website design & hosting</h3>
+            <p>Build a polished online presence with responsive design, hosting, and conversion-focused pages.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">📡</div>
+            <h3>CCTV & security</h3>
+            <p>Professional surveillance setups for homes and businesses needing safer environments.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">📈</div>
+            <h3>SEO & digital marketing</h3>
+            <p>Drive discoverability and enquiries with search visibility, campaigns, and digital strategy.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="repair-strip" id="repairs">
+        <div class="repair-copy">
+          <p class="eyebrow">Fast repairs</p>
+          <h2>Expert service without the guesswork</h2>
+          <p>
+            We diagnose honestly, repair efficiently, and stand behind the work with a simple, transparent approach.
+          </p>
+          <ul>
+            <li>Same-day diagnostics on selected jobs</li>
+            <li>Repair quotes before work starts</li>
+            <li>Support for laptops, desktops, and accessories</li>
+          </ul>
+        </div>
+
+        <div class="repair-panel">
+          <div class="repair-badge">90 Day Warranty</div>
+          <div class="repair-emoji">🧰</div>
+          <div class="repair-meta">
+            <strong>Common repairs</strong>
+            <span>Screen · Keyboard · Battery · Software · Port repair</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p class="eyebrow">Get in touch</p>
+            <h2>Let’s solve your tech problem</h2>
+            <p>
+              Whether you need a laptop, a repair, a website, or IT advice, our team is ready to help.
+            </p>
+
+            <ul class="contact-list">
+              <li><span>📍</span> Randburg / Ferndale, Johannesburg</li>
+              <li><span>📞</span> <a href="tel:+27836832745">+27 83 683 2745</a></li>
+              <li><span>✉️</span> <a href="mailto:sales@crosstechz.co.za">sales@crosstechz.co.za</a></li>
+              <li><span>🕒</span> Mon–Fri: 09:00–18:00 · Sat: 09:00–14:00</li>
+            </ul>
+          </div>
+
+          <form id="contactForm" class="contact-form">
+            <label>
+              Full name
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+
+            <label>
+              Contact details
+              <input type="text" name="contact" placeholder="Phone or email" required />
+            </label>
+
+            <label>
+              Service needed
+              <select name="service" required>
+                <option value="">Select a service</option>
+                <option>Laptop / PC purchase</option>
+                <option>Repair</option>
+                <option>Virus removal</option>
+                <option>Hardware upgrade</option>
+                <option>Website design</option>
+                <option>Hosting / SEO</option>
+                <option>IT support</option>
+                <option>General enquiry</option>
+              </select>
+            </label>
+
+            <label>
+              Message
+              <textarea name="message" rows="4" placeholder="Tell us what you need" required></textarea>
+            </label>
+
+            <button type="submit" class="btn btn-primary btn-full">Send enquiry</button>
+            <p id="formNote" class="form-note" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="assets/logo.jpg" alt="Cross Tech Systems logo" />
+          <span>Cross Tech Systems</span>
+        </div>
+        <p>Premium laptops, gaming PCs, repairs, support, and digital services in Randburg.</p>
+        <p>© <span id="year"></span> Cross Tech Systems. All rights reserved.</p>
       </div>
-    </article>
+    </footer>
 
-  </div>
-</section>
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
 
-<!-- ===== SERVICES ===== -->
-<section class="services" id="services">
-  <div class="section-head section-head--light">
-    <p class="eyebrow">What we do</p>
-    <h2>Beyond the laptop sale</h2>
-  </div>
-  <div class="service-grid">
-    <div class="service-card">
-      <span class="service-icon">🖥️</span>
-      <h3>Laptop &amp; PC repairs</h3>
-      <p>Screens, keyboards, batteries and motherboard‑level faults — diagnosed while you wait.</p>
-    </div>
-    <div class="service-card">
-      <span class="service-icon">📱</span>
-      <h3>Cellphone repairs</h3>
-      <p>Cracked screens and battery swaps, done on site, most jobs same day.</p>
-    </div>
-    <div class="service-card">
-      <span class="service-icon">📹</span>
-      <h3>CCTV installation</h3>
-      <p>Camera and alarm system setup for homes and small businesses.</p>
-    </div>
-    <div class="service-card">
-      <span class="service-icon">🛠️</span>
-      <h3>Hardware &amp; software support</h3>
-      <p>Upgrades, virus removal, data recovery and general troubleshooting.</p>
-    </div>
-    <div class="service-card">
-      <span class="service-icon">🔌</span>
-      <h3>IPTV installation</h3>
-      <p>Set up and configured properly, with a walkthrough included.</p>
-    </div>
-    <div class="service-card">
-      <span class="service-icon">🎧</span>
-      <h3>Accessories</h3>
-      <p>Headsets, cables and computer accessories in stock at the shop.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== ABOUT / STAFF ===== -->
-<section class="about" id="about">
-  <div class="about-media">
-    <img src="assets/about-staff.jpg" alt="Cross Tech Systems staff member in-store">
-  </div>
-  <div class="about-body">
-    <p class="eyebrow">Inside the shop</p>
-    <h2>Run by people who fix what they sell</h2>
-    <p>Cross Tech Systems started as a small repair counter and grew into a full IT support and technology shop at Westgate Shopping Centre. Every laptop we sell has passed through our own bench first — the same team that tests and preps your machine is who you'll speak to if anything needs a follow‑up.</p>
-    <ul class="about-points">
-      <li>Quality products, tested before sale</li>
-      <li>Expert support from in‑store technicians</li>
-      <li>Reliable service, straightforward pricing</li>
-    </ul>
-  </div>
-</section>
-
-<section class="storefront">
-  <img src="assets/about-storefront-night.jpg" alt="Cross Tech Systems storefront lit up at night">
-  <div class="storefront-caption">
-    <p>Cross Tech Systems · Westgate Shopping Centre, Cape Town</p>
-  </div>
-</section>
-
-<!-- ===== CONTACT ===== -->
-<section class="contact" id="contact">
-  <div class="contact-grid">
-    <div class="contact-info">
-      <p class="eyebrow">Get in touch</p>
-      <h2>Let's sort out your tech</h2>
-      <p class="section-sub">Send a message or call in — we usually reply the same day.</p>
-      <ul class="contact-list">
-        <li><span>📍</span> Shop 5, Westgate Shopping Centre, Cape Town, South Africa</li>
-        <li><span>📞</span> <a href="tel:+27813798480">081 379 8480</a></li>
-        <li><span>✉️</span> <a href="mailto:info@crosstechz.co.za">info@crosstechz.co.za</a></li>
-        <li><span>🌐</span> <a href="https://www.crosstechz.co.za" target="_blank" rel="noopener">www.crosstechz.co.za</a></li>
-      </ul>
-    </div>
-    <form class="contact-form" id="contactForm">
-      <label>Name
-        <input type="text" name="name" required placeholder="Your name">
-      </label>
-      <label>Email or phone
-        <input type="text" name="contact" required placeholder="How can we reach you?">
-      </label>
-      <label>Message
-        <textarea name="message" rows="4" required placeholder="Tell us what you need"></textarea>
-      </label>
-      <button type="submit" class="btn btn-primary btn-full">Send message</button>
-      <p class="form-note" id="formNote"></p>
-    </form>
-  </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <img src="assets/logo.jpg" alt="Cross Tech Systems logo">
-      <span>Cross Tech Systems</span>
-    </div>
-    <p>Shop 5, Westgate Shopping Centre, Cape Town, South Africa</p>
-    <p>© <span id="year"></span> Cross Tech Systems. All rights reserved.</p>
-  </div>
-</footer>
-
-<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
